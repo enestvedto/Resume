@@ -1,0 +1,194 @@
+%-------------------------
+% Resume in Latex
+% Author : Owen Enestvedt
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\owen}[5]{ % Adding a fifth argument for additional text
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{@{}l@{\extracolsep{\fill}}r@{}}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt} % Adjust as needed
+    \vspace{-3pt} % Vertical space before the additional text
+    \begin{flushleft}
+      \textbf{\small#5} % Additional text
+    \end{flushleft}\vspace{-12pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Owen Enestvedt} \\ \vspace{1pt}
+    \small 401-533-1816 $|$ \href{mailto:owen@enestvedt.net}{\underline{owen@enestvedt.net}} $|$ 
+    \href{https://www.linkedin.com/in/owen-enestvedt/}{\underline{LinkedIn}} $|$
+    \href{https://www.github.com/enestvedto}{\underline{GitHub}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \owen
+      {Merrimack College}{North Andover, MA}
+      {Bachelor of Science in Computer Science, Minor in Data Science}{August 2020 -- May 2024}{Cumulative GPA: 4.0}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+  \resumeSubheading
+      {.NET Developer Intern}{May 2022 -- August 2022}
+      {Visibility Corporation}{}
+      \resumeItemListStart
+        \resumeItem{Designed and developed multiple web interfaces for a SaaS ERP and Business Analytics product.}
+        \resumeItem{Modernized and optimized the UX/UI for a client-facing application impacting {\raisebox{0.5ex}{\texttildelow}}500 customers.}
+        \resumeItem{Used Domain Driven Design to construct a backend service for processing business data.}
+        \resumeItem{Used .NET technologies such as Blazor, Entity Framework Core 6, FluentUI, and Microsoft SQL Server.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer Intern}{May 2023 -- August 2023}
+      {Dell Technologies}{}
+      \resumeItemListStart
+        \resumeItem{Implemented monitoring to detect outdated base images in Dockerfiles in GitHub repositories, reducing technical debt and vulnerabilities.}
+        \resumeItem{Developed a Python script to automatically update base images, create new branches, and open pull requests when outdated images are found.}
+        \resumeItem{Automated communication of updates to developers and collaborated using Jira and Confluence for project tracking and documentation.}
+        \resumeItem{Gained exposure to Docker, Docker Hub, JFrog Artifactory, open-source security tools (Black Duck), and CI/CD processes with Jenkins.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Developer}{June 2022 -- May 2024}
+      {Merrimack College MackTracker}{}
+      \resumeItemListStart
+        \resumeItem{Designed and implemented an iOS application sought out by Merrimack College executives to track the on campus shuttle system used by over 5000 students and faculty.}
+        \resumeItem{Designed and developed the UI/UX for each screen of the app with familiar user friendly interactions such as by using Google Directions API and Google SSO. }
+        \resumeItem{Managed DevOps for development, beta release, and the initial launch.}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------HONORS AND AWARDS-----------
+\section{Honors and Awards}
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {Very Rev. Mortimer A. Sullivan, O.S.A. Medal}{May 2024}
+      {Merrimack College}{}
+      \resumeItemListStart
+        \resumeItem{Awarded for being the top-ranking Engineering and Computational Sciences student.}
+      \resumeItemListEnd
+
+      \resumeSubheading
+      {Eagle Scout}{November 2020}
+      {Boy Scouts of America}{}
+    \resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, Python, Javascript, SQL, HTML, CSS, C\#, Dart, R} \\
+     \textbf{Technologies}{: GitHub, Flask, REST, JUnit, Node.js, Express.js, Three.js, Flutter, ASP.NET, .NET, Blazor, Razor, Bootstrap, Docker, Jenkins, Kubernetes} \\
+     \textbf{Tools}{: Git, Jira, Figma, Swagger, Postman, Confluence}
+    }}
+ \end{itemize}
+ 
+ %-------------------------------------------
+\end{document}
