@@ -21,11 +21,7 @@ jobs:
       - name: Install LaTeX
         run: sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-fonts-extra
 
-      # Step 3: Compile LaTeX to PDF
-      - name: Compile LaTeX files to PDF
-        run: pdflatex OwenEnestvedtResume.tex
-
-      # Step 4: Delete the old resume PDF if it exists
+      # Step 3: Delete the old resume PDF if it exists
       - name: Delete old resume PDF (if exists)
         run: |
           if [ -f OwenEnestvedtResume.pdf ]; then
@@ -34,6 +30,10 @@ jobs:
           else
             echo "No old PDF found."
           fi
+
+      # Step 4: Compile LaTeX to PDF
+      - name: Compile LaTeX files to PDF
+        run: pdflatex OwenEnestvedtResume.tex
 
       # Step 5: Upload the newly compiled PDF as an artifact
       - name: Upload new resume PDF as artifact
